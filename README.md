@@ -1,30 +1,46 @@
-# список заданий
-  Приложение формирует список заданий, добавляемых пользователем. 
-  Все созданные задания загружаются в локальное хранилище LocalStorage и подгружаются из него.Если хранилище пусто на первой странице отобразится строка 
-"Список задач пуст". 
-  
-  Приложение состоит из 2-х страниц. На первой странице отображается список заданий, кнопка "Создать новую задачу" и выпадающий список "Параметры сортировки".
-  Кнопка и выпадающий список закреплены вверху страницы. Таким образом при прокрутке вниз списка они всегда остаются видны и доступны. На странице организована 
-пагинация. Отображаются первые 15 записей. При прокрутке вниз происходит подгружение следующих 15 записей. По достижении конца списка под последним элементом
-списка появится строка "Конец списка". 
-  Каждое задание состоит из заголовка, текста задания, даты начала выполнения задания и даты его окончания. Так же в правой части у каждого задания имеются
-такие элементы как : 
-- комбо-бокс(галочка) "Выполнено". Если она поставлена это означает что задание выполнено. Поставить или снять данную метку можно только на первой странице.
-- кнопка "Удалить". При клике по ней появляется диалоговое окно с текстом "Вы действительно хотите удалить задачу?" и ниже кнопки "Да" и "Нет". При клике
-на кнопке "Нет" окно закроется без изменений. При клике на кнопке "Да" произойдет удаление выбранного задания.
-- кнопка "Редактировать". При клике по которой откроется вторая страница, на которой можно как добавлять так и редактировать задания. В данном случае поля 
-с название задания, его текстом и датами начала и конца будут заполнены. И их можно редактировать. 
-  При клике по выпадающему списку в верхней части первой страницы можно выбрать параметры по которым будет отсортирован список заданий. Это - "По названию",
-"По дате начала", "По дате окончания" . При выборе одного из этих параметров список заданий будет отсортирован по соответствующему критерию.
-  
-  Вторая страница позволяет добавлять новую задачу или редактировать выбранную на первой. 
-  Вверху расположена кнопка "Назад к списку задач" при клике по которой пользователь вернется на первую страницу. Наже расположены поля для ввода заголовка 
-задания и его текстового содержимого с соответствующими подсказками. Ниже этих полей находятся поля выбора даты начала и даты окончания задания. При клике
-в любом из этих полей появится календарь, где пользователь может выбрать год, месяц и день. В самом низу страницы находится кнопка "Добавить/Изменить задачу".
-При добавлении новой задачи или изменении ее появится алерт с надписью "Задача добавлена" либо "задача изменена" соответственно и произойдет переход на первую
-страницу где уже будут отображены изменения.
+# Getting Started with Create React App and Redux
 
-Все задачи находятся в хранилище store в виде массива объектов value. Для возможности мутации содержимого хранилища использовался пакет redux Toolkit. Все манипуляции с хранилищем 
-(добавление нового элемента в массив- addTask, изменение свойства "Выполнено" у задания - editIsDo, удаление элемента из массива value по его номеру -
-delTask и замена определенного элемента в массиве value -editableTask) происходят в файле taskSlice.js. Подключение хранилища к localStorage происходит
-в файле index.js через PersistGate. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
